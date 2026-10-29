@@ -1,0 +1,64 @@
+```html
+<!-- Nicolás Jiménez Martín - DAM Online - Práctica Formulario II -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de medias</title>
+</head>
+
+<body>
+
+    <h2>Bienvenido a la calculadora de medias</h2>
+
+    <form id="formulario">
+
+        <h3>Introduce tus datos personales</h3>
+
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido1" placeholder="Apellido 1" required>
+        <input type="text" name="apellido2" placeholder="Apellido 2" required>
+
+        <h3>Introduce tus notas</h3>
+
+        <input type="number" name="nota1" placeholder="Nota 1"
+               min="0" max="10" step="0.01" required>
+
+        <input type="number" name="nota2" placeholder="Nota 2"
+               min="0" max="10" step="0.01" required>
+
+        <input type="number" name="nota3" placeholder="Nota 3"
+               min="0" max="10" step="0.01" required>
+
+        <br><br>
+
+        <button type="submit">Calcular media</button>
+
+        <p id="resultado" aria-live="polite"></p>
+
+    </form>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        const resultado = document.getElementById("resultado");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nota1 = parseFloat(formulario.nota1.value);
+            const nota2 = parseFloat(formulario.nota2.value);
+            const nota3 = parseFloat(formulario.nota3.value);
+
+            const media = (nota1 + nota2 + nota3) / 3;
+
+            resultado.textContent = "La media de tus notas es: "
+                + media.toFixed(2);
+        });
+    </script>
+
+</body>
+</html>
+```
