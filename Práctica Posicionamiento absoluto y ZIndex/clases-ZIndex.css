@@ -1,0 +1,57 @@
+/* Nicolás Jiménez Martín - DAM Online - Clases Práctica Posicionamiento absoluto y ZIndex */
+
+
+.fondo{
+    width: 800px;
+    height: 813px;
+    background-color: #19e219;
+}
+
+#asbastos{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 7;
+}
+
+#dosbastos{
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 6;
+}
+
+#asoros{
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    z-index: 5;
+}
+
+#cuatrooros{
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    z-index: 4;
+}
+
+#ascopas{
+    position: absolute;
+    top: 320px;
+    left: 320px;
+    z-index: 3;
+}
+
+#cuatrocopas{
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    z-index: 2;
+}
+
+#cuatroespadas{
+    position: absolute;
+    top: 480px;
+    left: 480px;
+    z-index: 1;
+}
